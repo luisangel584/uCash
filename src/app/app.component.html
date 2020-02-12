@@ -2,30 +2,30 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
 
   <!-- Navbar brand -->
-  <mdb-navbar-brand><a class="navbar-brand" [routerLink]="['/']" routerLinkActive="active" >UCash</a></mdb-navbar-brand>
+  <mdb-navbar-brand><a class="navbar-brand" [routerLink]="['']" routerLinkActive="active" >UCash</a></mdb-navbar-brand>
 
   <!-- Collapsible content -->
   <links>
 
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect
-          [routerLink]="['/']" routerLinkActive="active" >
+      <li class="nav-item" >
+        <a class="nav-link waves-light" mdbWavesEffect 
+        [routerLink]="['home']" routerLinkActive="active">
           Home
           <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link waves-light" mdbWavesEffect
-          [routerLink]="['/login']" routerLinkActive="active" >
-          Login
+        [routerLink]="['login']" routerLinkActive="active" >
+          Ingresar
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link waves-light" mdbWavesEffect
-          [routerLink]="['/user-profile']" routerLinkActive="router-link-active" >
-          Profile
+        [routerLink]="['user-profile']" routerLinkActive="active" >
+          Perfil
         </a>
       </li>
 
@@ -35,7 +35,7 @@
     <ul class="navbar-nav ml-auto nav-flex-icons">
       <li class="nav-item">
         <a class="nav-link"
-          [routerLink]="['/user-profile']" routerLinkActive="router-link-active" >
+        [routerLink]="['/user-profile']" routerLinkActive="active" >
           <mdb-icon fas icon="user"></mdb-icon>
         </a>
       </li>
@@ -46,4 +46,6 @@
 </mdb-navbar>
 <!--/.Navbar-->
 
-<router-outlet></router-outlet>
+<div class="container-fluid mt-3">
+  <router-outlet></router-outlet>
+</div>
