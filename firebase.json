@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "uCash",
+      "public": "dist/uCash",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ucash-9d489": {
+      "hosting": {
+        "uCash": [
+          "ucash-9d489"
+        ]
+      }
+    }
+  }
+}
