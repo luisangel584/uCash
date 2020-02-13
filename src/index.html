@@ -14,12 +14,19 @@
 </html>
 <style>
   nav {
-    background-image: url('../assets/navbarbg.png');
+    background: url('../assets/navbarbg.png') no-repeat;
+    background-size:cover;
     opacity: 0.95;
-    height: 150px;
+    height: auto;
+    padding-bottom: 3em !important;
   }
   .navbar-collapse {
     position:relative !important;
-    top:-30px !important;
+    height: auto;
   }
+@media screen and (max-width:400px) {
+  nav {
+    padding-bottom: 7em !important;
+  }
+}
   </style> 
