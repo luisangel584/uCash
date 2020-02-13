@@ -25,7 +25,6 @@ export class RegisterComponent implements OnInit {
   onSubmit(f) {
     this.auth.registerUser(this.user)
     .subscribe((res) => {
-      console.log(res);
       this.router.navigateByUrl('/usuario/perfil');
     }, (err) => {
       console.log(err.error.error.message);
