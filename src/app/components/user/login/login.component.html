@@ -2,15 +2,30 @@
     <div class="row justify-content-md-center mt-5">
         <div class="col col-md-6 col-xs 8">
             <!-- Default form login -->
-            <form class="text-center border border-light p-5">
+            <form
+                (ngSubmit)="onSubmit(f)" 
+                #f="ngForm"
+                class="text-center border border-light p-5">
 
                 <p class="h4 mb-4">Sign in</p>
             
                 <!-- Email -->
-                <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+                <input 
+                    name="email"
+                    type="email" 
+                    id="defaultLoginFormEmail" 
+                    class="form-control mb-4" 
+                    placeholder="E-mail"
+                    [(ngModel)]="user.email">
             
                 <!-- Password -->
-                <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+                <input 
+                    name="password"
+                    type="password" 
+                    id="defaultLoginFormPassword" 
+                    class="form-control mb-4" 
+                    placeholder="Password"
+                    [(ngModel)]="user.password">
             
                 <div class="d-flex justify-content-around">
                 <div>
