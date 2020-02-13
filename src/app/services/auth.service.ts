@@ -31,4 +31,16 @@ export class AuthService {
     );
   }
 
+  loginUser(user: UserModel) {
+    const dataUser = {
+      ...user,
+      returnSecureToken: true
+    };
+
+    return this.http.post(
+      `${this.apiRoute}:signInWithPassword?key=${this.apiKey}`,
+      dataUser
+    );
+  }
+
 }
