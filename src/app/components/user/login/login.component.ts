@@ -28,11 +28,11 @@ export class LoginComponent implements OnInit {
     console.log(this.user);
     console.log(form);
 
-    this.auth.registerUser(this.user)
+    this.auth.loginUser(this.user)
       .subscribe((res) => {
         console.log(res);
 
-        this.router.navigateByUrl('home');
+        this.router.navigateByUrl('/usuario/perfil');
       },
       (err) => {
         console.log(err.error.error.message);
