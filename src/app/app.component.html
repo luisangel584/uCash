@@ -1,8 +1,10 @@
 <!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark transparent" [containerInside]="false">
 
   <!-- Navbar brand -->
-  <mdb-navbar-brand><a class="navbar-brand" [routerLink]="['home']" routerLinkActive="active" >UCash</a></mdb-navbar-brand>
+
+  <mdb-navbar-brand><a class="navbar-brand" [routerLink]="['home']" routerLinkActive="active" ><img src="../assets/logo.png" class="logoStyle"></a></mdb-navbar-brand>
+
 
   <!-- Collapsible content -->
   <links>
@@ -46,6 +48,6 @@
 </mdb-navbar>
 <!--/.Navbar-->
 
-<div class="container-fluid mt-3">
+<div class="container-fluid mt-3" >
   <router-outlet></router-outlet>
 </div>
