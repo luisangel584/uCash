@@ -18,7 +18,8 @@ const routes: Routes = [
     path: 'user-profile',
     component: ProfileComponent
   },
-  { path: '**', component: HomeComponent }
+
+  { path: '**', component: ProfileComponent }
 ];
 
 @NgModule({

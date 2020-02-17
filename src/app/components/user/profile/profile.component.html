@@ -1,12 +1,5 @@
 <!--Main Navigation-->
-<header>
-
-  </header>
-  <!--Main Navigation-->
-  <!--Main Layout-->
-  <main>
-
-    <div class="container">
+<div class="container">
 
       <!--Section: Team v.1-->
       <section class="text-center team-section">
@@ -15,7 +8,7 @@
         <div class="row text-center">
 
           <!--Grid column-->
-          <div class="col-md-12 mb-4" style="margin-top: -30px;">
+          <div class="col-md-12 mb-4" style="margin-top: -110px;">
 
             <div class="avatar mx-auto col-md-2">
               <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="img-fluid rounded-circle z-depth-1" alt="First sample avatar image">
@@ -24,120 +17,145 @@
               <strong>Hola!</strong>
             </h3>
 
-            
-            <h6 class="font-weight-bold teal-text mb-4">Datos personales</h6>
 
-
-        
-
-            <!-- <p class="mt-5">Datos de perfil etc etc etc..................................... </p> -->
-    
+            <h4 class="font-weight-bold teal-text mb-4">Datos personales</h4>
 
             <div class="col-18 my-3">
 
                   <!-- Nav tabs -->
                   <div class="nav nav-tabs md-tabs">
-                      
-                      <ul class="nav tabs-cyan" role="tablist">
+
+                      <ul class="nav" role="tablist" >
                           <li class="nav-item">
-                              <a class="nav-link active" data-toggle="tab" href="#panel36" role="tab">
-                                <i class="fas fa-user"></i> Perfil</a>
+                              <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab" TARGET="_self">
+                                <i class="fas fa-user"></i> Datos personales</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link waves-light waves-effect waves-light" data-toggle="tab" href="#panel37" role="tab">
+                              <a class="nav-link waves-light waves-effect waves-light" data-toggle="tab " href="app.component.html#panel2" role="tab" TARGET="_self">
                                 <i class="fas fa-map-marker-alt"></i> Domicilio</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link waves-light waves-effect waves-light" data-toggle="tab" href="#panel38" role="tab">
+                              <a class="nav-link waves-light waves-effect waves-light" data-toggle="tab" href="#panel3" role="tab">
                                 <i class="fas fa-id-card"></i> Contactos</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link waves-light waves-effect waves-light" data-toggle="tab" href="#panel39" role="tab">
+                              <a class="nav-link waves-light waves-effect waves-light" data-toggle="tab" href="#panel4" role="tab">
                                 <i class="fas fa-money-check-alt"></i> Datos bancarios</a>
                           </li>
                       </ul>
                   </div>
                   <!-- Tab panels -->
-                  <div class="tab-content card">
+                  <div class="tab-content card" style="border-color:deepskyblue !important">
                       <!--Panel 1-->
-                      <div class="tab-pane fade in show active" id="panel36" role="tabpanel">
+                      <div class="tab-pane fade in show active col-md" id="panel1" role="tabpanel">
+                        <br>
                         <div class="row">
 
                             <!--Grid column-->
                             <div class="col-md-4 mb-4">
-              
+
                                 <div class="md-form">
-                                    <input type="text" id="form1" class="form-control">
-                                    <label for="form1" class="active">Nombre (s)</label>
+                                    <label type="text" id="form1" >SONIA</label>
+                                    <label for="form1" class="active font-weight-bold">Nombre (s)</label>
                                 </div>
-              
+
                             </div>
                             <!--Grid column-->
-              
+
                             <!--Grid column-->
                             <div class="col-md-4 mb-4">
-              
-                                <div class="md-form form-sm">
-                                    <input type="text" id="form2" class="form-control">
-                                    <label for="form2" class="active">Apellido paterno</label>
+
+                                <div class="md-form form">
+                                    <label type="text" id="form2" >HERNANDEZ</label>
+                                    <label for="form2" class="active font-weight-bold">Apellido paterno</label>
                                 </div>
-              
+
                             </div>
                             <!--Grid column-->
-              
+
                             <!--Grid column-->
                             <div class="col-md-4 mb-4">
-              
+
                                 <div class="md-form">
-                                    <input type="text" id="form3" class="form-control">
-                                    <label for="form3" class="active">Apellido materno</label>
+                                    <label type="text" id="form3" >HERNANDEZ</label>
+                                    <label for="form3" class="active font-weight-bold">Apellido materno</label>
                                 </div>
-              
+
                             </div>
                             <!--Grid column-->
-              
+
                         </div>
-            
+
+                        <br>
                         <div class="row">
-            
+                        
+
                             <!--Grid column-->
                             <div class="col-md-4 mb-4">
-              
+
                                 <div class="md-form">
-                                    <input type="text" id="form4" class="form-control">
-                                    <label for="form4" class="active">Telefono</label>
+                                    <label type="text" id="form4" disabled="disabled">3320202020</label>
+                                    <label for="form4" class="active font-weight-bold">Telefono</label>
                                 </div>
-              
+
                             </div>
                             <!--Grid column-->
-              
+
                             <!--Grid column-->
                             <div class="col-md-4 mb-4">
-              
-                                <div class="md-form form-sm">
-                                    <input placeholder="ejemplo@dominio.com" type="text" id="form5" class="form-control">
-                                    <label for="form5" class="active">Correo</label>
-                                </div>
-              
-                            </div>
-                            <!--Grid column-->
-              
-                            <!--Grid column-->
-                            <div class="col-md-4 mb-4">
-              
+
                                 <div class="md-form">
-                                    <input type="text" id="form6" class="form-control">
-                                    <label for="form6" class="active">Apellido materno</label>
+                                    <label type="text" id="form5">ejemplo@hotmail.com</label>
+                                    <label for="form5" class="active font-weight-bold">Correo</label>
                                 </div>
-              
+
                             </div>
                             <!--Grid column-->
-              
+
+                            <!--Grid column-->
+                            <div class="col-md-4 mb-4">
+
+                                <div class="md-form">
+                                    <label type="text" id="form6" >HEHS920212LOV</label>
+                                    <label for="form6" class="active font-weight-bold">RFC</label>
+                                </div>
+
+                            </div>
+                            <!--Grid column-->
+
                         </div>
+
+                        <br>
+                        <br>
+                        <div class="row">
+
+                          <div class="col-md-6 mb-4">
+
+                            <div class="md-form">
+                              <label for="form7" class="active text-center font-weight-bold">INE Anverso</label><br>
+                              <img src="../assets/sources/untitled1.png" class="rounded mx-auto" style="width: 258px; height: 162px">
+                            </div>
+
+                          </div>
+
+                          <div class="col-md-6 mb-4">
+
+                            <div class="md-form">
+                              <label for="form8" class="active text-center font-weight-bold">INE Reverso</label><br>
+                              <img src="../assets/sources/untitled2.png" class="rounded mx-auto" style="width: 258px; height: 162px">
+                            </div>
+
+                          </div>
+                           
+
+                        </div>
+
+
+
                       </div>
                       <!--/.Panel 1-->
                       <!--Panel 2-->
-                      <div class="tab-pane fade" id="panel37" role="tabpanel">
+                      <div class="tab-pane fade" id="panel2" role="tabpanel">
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus
                               reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat
                               ratione porro voluptate odit minima.</p>
@@ -147,32 +165,26 @@
                       </div>
                       <!--/.Panel 2-->
                       <!--Panel 3-->
-                      <div class="tab-pane fade" id="panel38" role="tabpanel">
+                      <div class="tab-pane fade" id="panel3" role="tabpanel">
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus
                               reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat
                               ratione porro voluptate odit minima.</p>
                       </div>
                       <!--/.Panel 3-->
                       <!--Panel 4-->
-                      <div class="tab-pane fade" id="panel39" role="tabpanel">
+                      <div class="tab-pane fade" id="panel4" role="tabpanel">
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus
                               reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat
                               ratione porro voluptate odit minima.</p>
                       </div>
                       <!--/.Panel 4-->
                   </div>
-
-                
-
               </div>
+
+              
 
 
             <!-- TABTABTABTATABTABTABTAB -->
-
-
-
-            
-            
 
 
 
@@ -207,4 +219,5 @@
           </li>
         </ul>
 
-       
+        </section>
+</div>
