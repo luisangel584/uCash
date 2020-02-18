@@ -9,23 +9,34 @@
     .fondo{
       background: url('../assets/Fondo-home.png') !important;
       background-size:cover;
-      height: auto;
+      height: 100% !important;
       width: 100% !important;
       background-position: center center;
       background-repeat: no-repeat !important; 
-      position:relative !important;
-      height: auto;
+      
+
      
       }
       .fondo2{
       background: url('../assets/fondo2.png') !important;
       background-size:cover;
-      height: auto;
       width: 100% !important;
+      height: 100% !;
       background-position: center center;
       background-repeat: no-repeat !important; 
-      
       }
+
+    
+      .fondo3{
+      background: url('../assets/fondo3.png') !important;
+      background-size:cover;
+      width: 100% !important;
+      height: 100% !;
+      background-position: center center;
+      background-repeat: no-repeat !important; 
+      }
+      
+      
       
     /* Steps */
     .step {
@@ -352,165 +363,141 @@
           <br>
           <br>
           <br>
-   </section>
-
+          
+      <div class="col-4">
+          <div class="card">
+              <!--Card content-->
+              <div class="card-body z-depth-1-half">
   
-   <div class="col-5" style="background-color: white; " >
+                <!-- Form -->
+                <form class="text-center" style="color: #757575;">
 
-    <form>
-      <div class="form-group">
-        <h6 style="color: #939393;" class="font-weight-bold my-4 pb-2 text-center">Importe</h6>
-        <input type="range" class="form-control-range" id="formControlRange">
+                  <h4 style="color: #739FFD;" class="font-weight-bold my-4 pb-2 text-center">Simulador de Inversión</h4>
+                  
+
+                  <form>
+                    <div class="form-group">
+                      <h6 style="color: #939393;" class="font-weight-bold my-4 pb-2 text-center">Importe</h6>
+                      <input type="range" class="form-control-range" id="formControlRange">
+                      <label for="" style="color: #939393; font-size: 10px;" class="font-weight-bold my-4 pb-2 text-center">Rendimiento</label>
+                      
+                    </div>
+                  </form>
+                 
+
+                  <section>
+                      
+                    <canvas mdbChart
+                      [chartType]="chartType"
+                      [datasets]="chartDatasets"
+                      [labels]="chartLabels"
+                      [colors]="chartColors"
+                      [options]="chartOptions"
+                      [legend]="true"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)">
+                    </canvas>
+
+                    <label for="" style="color: #939393; font-size: 10px;" class="font-weight-bold my-4 pb-2 text-center">Meses</label>
+                
+                    </section>
+
+                  <br>
+                  <br>        
+                </form>
+                <!-- Form -->
+            </div>
+        </div>
+            <!-- Material form login -->
       </div>
-    </form>
-
-    <canvas mdbChart
-        [chartType]="chartType"
-        [datasets]="chartDatasets"
-        [labels]="chartLabels"
-        [colors]="chartColors"
-        [options]="chartOptions"
-        [legend]="true"
-        (chartHover)="chartHovered($event)"
-        (chartClick)="chartClicked($event)">
-    </canvas>
-  </div>
 
 
 
 
+        <div class="col-6">
+
+        </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+      </section>
+  </div><!--final de inversion-->
 
 
 
-
-
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div><!--Final Div Principal-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="container-fluid">   <!--aqui empieza el contenedor principal-->
-    <div>
-        <!--Section: Content-->
-       
-      
-      
-
-      
-      <div class="container" style="background-color:transparent;" >
-
-  <!-- Section -->
- 
-
-</div>
-</div>
-
-
-
-
-
-<div class="container z-depth-1 my-5 pt-5 pb-3 px-5">
-
-    <!-- Section -->
+  <div class="col-md">
     <section>
+      <br>
+      <br>
+      <h3 class="font-weight-bold text-center pb-2" style="color: #739FFD;">¿Cómo Invertir?</h3>
+      <br>
+      <br>
       
-        
-      <!-- Modal -->
-      <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-              <iframe id="player" class="embed-responsive-item" src="https://www.youtube.com/embed/7MUISDJ5ZZ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <h3 class="font-weight-bold text-center dark-grey-text pb-2">Three Easy Steps</h3>
-      <hr class="w-header my-4">
-      <p class="lead text-center text-muted pt-2 mb-5">Explore the best MDB template in the market in a short 1-minute video.</p>
-  
-      <div class="row align-items-center">
-  
-        <div class="col-lg-6 mb-4">
-          <div class="view z-depth-1-half rounded">
-            <img class="rounded img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/12-col/img%20(6).jpg" alt="Video title">
-            <div class="mask flex-center rgba-black-light">
-              <a id="play" class="btn-floating btn-primary btn-lg" data-toggle="modal" data-target="#modal1"><i class="fas fa-play"></i></a>
-            </div>
-          </div>
+      <div class="row">
+
+        <div class="col-1">
+
         </div>
   
-        <div class="col-lg-6 mb-4">
+        <div class="col-md-5 mx-auto">
   
-          <ol class="step pl-0">
+          <ol class="step pl-0 float-right">
             <li class="step-element pb-0">
               <div class="step-number">
                 <span class="number">1</span>
               </div>
               <div class="step-excerpt">
-                <h6 class="font-weight-bold dark-grey-text mb-3">Write your requirements</h6>
-                <p class="text-muted">Think the or organization same proposal to affected heard reclined in be it reassuring.</p>
+                <h6 class="letra1 font-weight-bold mb-4">Usa nuestra calculadora de inversión para estimar tus ganancias y regístrate en nuestra plataforma.</h6>
+                
               </div>
+              
             </li>
+         
             <li class="step-element pb-0">
-              <div class="step-number">
+              <div class="step-number2">
                 <span class="number">2</span>
               </div>
               <div class="step-excerpt">
-                <h6 class="font-weight-bold dark-grey-text mb-3">Sign the contract</h6>
-                <p class="text-muted">Think the or organization same proposal to affected heard reclined in be it reassuring.</p>
+                <h6 class="letra2 font-weight-bold  mb-3">En el menú da click en Invertir, completa los datos que se requieren y acepta nuestros términos y condiciones.</h6>
               </div>
             </li>
             <li class="step-element pb-0">
-              <div class="step-number">
+              <div class="step-number3">
                 <span class="number">3</span>
               </div>
               <div class="step-excerpt">
-                <h6 class="font-weight-bold dark-grey-text mb-3">We start developing</h6>
-                <p class="text-muted">Think the or organization same proposal to affected heard reclined in be it reassuring.</p>
+                <h6 class="letra3 font-weight-bold mb-3">Transfiere la cantidad de dinero que deseas invertir y ¡ve crecer tu dinero! Lo podrás retirar despues de 6 meses de inversión.</h6>
               </div>
+
             </li>
           </ol>
+          <br>
+          <br>
+        </div>
+
+        <div class="col-md-1">
+
+
+        </div>
+                  <!--Aqui son las img-->
+        <div class="col-md-5 float-right">
+          <div class="col">
+            <img class="imagenderecha" src='../assets/calculadora.png'>
+          </div>
+          <div class="col">
+            <img class="imagenderecha" src='../assets/form.png'>
+          </div>
+          <div class="col">
+            <img class="imagenderecha" src='../assets/ganancias.png'>
+          </div>
+          
   
         </div>
   
@@ -518,26 +505,30 @@
       
     </section>
     <!-- Section -->
+    
+    <!--Steps-->
+  </div> <!--final de los pasos-->
   
-  </div>
 
-  <!--steps de inversion-->
-  <div class="container mt-5">
+    <div class="">
 
 
   <!--Section: Content-->
-  <section class="text-center dark-grey-text">
+  <section class="text-center dark-grey-text fondo3">
+    <br>
+    <br>
+    <br>
+    <br>
+
 
     <!-- Section heading -->
-    <h3 class="font-weight-bold mb-4 pb-2">Testimonials</h3>
-    <!-- Section description -->
-    <p class="text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam
-      eum porro a pariatur veniam.</p>
+    <h1 class="font-weight-bold mb-4 pb-2" style="color: #00D397;">Testimonios</h1>
+      
 
     <!-- Grid row -->
     <div class="row">
 
+     
       <!--Grid column-->
       <div class="col-lg-4 col-md-12 mb-4">
         <!--Card-->
@@ -613,8 +604,50 @@
 
   </section>
   <!--Section: Content-->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+</div>
 
+
+
+
+
+<div class="row fondo2">
+  <div class="col-sm ">
+   
+  </div>
 
 </div>
-</div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!--Final Div Principal-->

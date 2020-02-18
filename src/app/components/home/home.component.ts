@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   public chartType: string = 'bar';
 
   public chartDatasets: Array<any> = [
-    { data: [65, 59, 80, 81,], label: 'Simulador de Inversión' }
+    { data: [65, 59, 80, 81,], label: '' }
   ];
 
   public chartLabels: Array<any> = ['6', '12', '18', '24'];
