@@ -4,10 +4,38 @@
     height: 61px;
     color: 
     transparent;
-    font: 0/0 a;
+    font: 0/0 ;
     text-shadow: none;
 }
 
-.nav-barColor{
-    background-color: #05454c;
+.logoStyleFooter{
+    display: block;
+    width: 231px;
+    height: 140px;
+    color: 
+    transparent;
+    font: 0/0 ;
+    text-shadow: black;
+}
+
+.footerstyle{
+    display: flex;
+    background: url('../assets/footerbg.png') no-repeat;
+    background-size: 100% 100%;
+    width: auto;
+    color: white;
+    height: auto;
+  }
+.footercontent{
+    margin-top:100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.copyBg{
+    background-color: #00434B;
+    
+}
+.borderSocials{
+    border-top: 1px solid #66D298;
 }
