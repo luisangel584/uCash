@@ -10,3 +10,13 @@
 .logoStyle{
     position:relative !important;
 }
+.container-fluid {
+    width: 100vw !important;
+    padding: 0 !important;
+}
+
+body {
+    overflow-x: hidden;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

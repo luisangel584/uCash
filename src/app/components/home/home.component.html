@@ -1,78 +1,620 @@
-<div class="container-fluid mt-3">
-    <div class="card-deck">
-        <!-- Card -->
-        <mdb-card>
-            <div class="view overlay waves-light" mdbWavesEffect>
-            <!-- Card img -->
-            <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap"></mdb-card-img>
-            <a>
-                <div class="mask rgba-white-slight"></div>
-            </a>
-            </div>
-            <!--Card content-->
-            <mdb-card-body>
-            <!--Title-->
-            <mdb-card-title>
-                <h4>Card Title</h4>
-            </mdb-card-title>
-        
-            <!--Text-->
-            <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-            </mdb-card-text>
-        
-            <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-            </mdb-card-body>
-        </mdb-card>
-        
-        <!-- Card -->
-        <mdb-card>
-            <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-            <!-- Card img -->
-            <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap"></mdb-card-img>
-            <a>
-                <div class="mask"></div>
-            </a>
-            </div>
-            <!--Card content-->
-            <mdb-card-body>
-            <!--Title-->
-            <mdb-card-title>
-                <h4>Card Title</h4>
-            </mdb-card-title>
-        
-            <!--Text-->
-            <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-            </mdb-card-text>
-        
-            <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-            </mdb-card-body>
-        </mdb-card>
-        
-        <!-- Card -->
-        <mdb-card>
-            <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-            <!-- Card img -->
-            <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg" alt="Card image cap"></mdb-card-img>
-            <a>
-                <div class="mask"></div>
-            </a>
-            </div>
-            <!--Card content-->
-            <mdb-card-body>
-            <!--Title-->
-            <mdb-card-title>
-                <h4>Card Title</h4>
-            </mdb-card-title>
-        
-            <!--Text-->
-            <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-            </mdb-card-text>
-        
-            <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-            </mdb-card-body>
-        </mdb-card>
+<style>
+
+    .btn {
+      border: 2px solid #e0e0e0;
+      padding: 15px;
+      border-radius: 40px;
+}
+
+    .fondo{
+      background: url('../assets/Fondo-home.png') !important;
+      background-size:cover;
+      height: auto;
+      width: 100% !important;
+      background-position: center center;
+      background-repeat: no-repeat !important; 
+      position:relative !important;
+      height: auto;
+     
+      }
+      .fondo2{
+      background: url('../assets/fondo2.png') !important;
+      background-size:cover;
+      height: auto;
+      width: 100% !important;
+      background-position: center center;
+      background-repeat: no-repeat !important; 
+      
+      }
+      
+    /* Steps */
+    .step {
+      list-style: none;
+      margin: 0;
+    }
+    .step2 {
+      list-style: none;
+      margin: 0;
+    }
+    .step3 {
+      list-style: none;
+      margin: 0;
+    }
+
+    .step-element {
+      display: flex;
+      padding: 2rem 0;
+    }
+    .step-element2 {
+      display: flex;
+      padding: 2rem 0;
+    }
+    .step-element3 {
+      display: flex;
+      padding: 2rem 0;
+    }
+
+    .step-number {
+      position: relative;
+      width: 7rem;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    .step-number2 {
+      position: relative;
+      width: 7rem;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    .step-number3 {
+      position: relative;
+      width: 7rem;
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    .step-number .number {
+      color:white;
+      background-color:#739FFD;
+      font-size: 1.5rem;
+    }
+
+    .step-number2 .number {
+      color:white;
+      background-color:#00DCD7;
+      font-size: 1.5rem;
+    }
+    .step-number3 .number {
+      color:white;
+      background-color:#00D397;
+      font-size: 1.5rem;
+    }
+
+    .step-number .number {
+      width: 48px;
+      height: 48px;
+      line-height: 48px;
+    }
+    .step-number2 .number {
+      width: 48px;
+      height: 48px;
+      line-height: 48px;
+    }
+    .step-number3 .number {
+      width: 48px;
+      height: 48px;
+      line-height: 48px;
+    }
+
+    .number {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      border-radius: 15rem;
+    }
+
+    .step-number::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 48px;
+      bottom: -2rem;
+      margin-left: -1px;
+      /* border-left: 2px dashed #eaeff4; */
+    }
+
+    .step .step-element:last-child .step-number::before {
+      bottom: 1rem;
+    }
+
+    .letra1{
+      color: #739FFD;
+      padding: 1rem;
+    }
+    .letra2{
+      color: #00DCD7;
+      padding: 1rem;
+    }
+    .letra3{
+      color: #00D397;
+      padding: 1rem;
+      
+    }
+    .imagenderecha{
+      padding: 1rem;
+      align-items: center;
+    }
+ 
+  </style>
+
+<div class="container-fluid ">
+<div class="row fondo">
+  <div class="col-sm">
+    
+    <section >
+         
+      <br>
+      <br>
+             
+       <form class="">
+   
+         <div class="row">
+
+          <div class="col-7">
+
+          </div>
+           
+           <div class="col-4">
+             <!-- Material form login -->
+             <div class="card">
+   
+               <!--Card content-->
+               <div class="card-body z-depth-1-half">
+   
+                 <!-- Form -->
+                 <form class="text-center" style="color: #757575;" action="#!">
+
+                   <section>
+   
+                   <h3 style="color: #739FFD;" class="font-weight-bold my-4 pb-2 text-center">¿Cuánto necesito?</h3>
+
+                   
+
+                   <form>
+                    <div class="form-group">
+                      <h6 style="color: #939393;" class="font-weight-bold my-4 pb-2 text-center">Monto</h6>
+                      <input type="range" class="form-control-range" id="formControlRange">
+                    </div>
+                  </form>
+
+                   <input type="text" id="Montocapturado" style="border: 0; text-align: center;" class="monto col-lg-4" placeholder="$" >
+
+                  <form>
+                    <div class="form-group">
+                      <h6 style="color: #939393;" class="font-weight-bold my-4 pb-2 text-center">Plazo</h6>
+                      <input type="range" class="form-control-range" id="formControlRange">
+                    </div>
+                  </form>
+
+                   <input type="text" id="mescapturado" style="border: 0; text-align: center;" class="mes col-lg-4" placeholder="Meses" color="#202020">
+                 
+                 </section>
+
+                   <br>
+                   <br>
+                   
+               <div class="row center"> 
+
+
+                 <div class="col-md-6 mb-1">
+                 <div class="md-form">
+                     <!-- calculo -->
+                     <h6 style="color: #939393;" class="active font-weight-bold">Mensualidad</h6>
+                    <input type="text" id="calculo " class="form-control" placeholder="$" disabled>
+                         
+                 </div>
+               </div>
+               
+               <div class="col-md-6 mb-2">
+                 <div class="md-form">
+
+                   <button mdbBtn type="button" color="primary" rounded="true" mdbWavesEffect>¡Lo quiero!</button>
+                   
+                 </div>
+               </div>
+
+              <div class="col">
+              <label class="text-center" for="" style="color: #939393; font-size: 10px;" > La tasa varia desde el 17% hasta el 70% anual dependiendo tu perfil crediticio</label>
+            </div> 
+            
+            </div>  
+                   
+                         
+                 </form>
+                 <!-- Form -->
+   
+               </div>
+   
+             </div>
+             <!-- Material form login -->
+           </div>
+         </div>
+   
+       </form>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+                  
+   
+     </section>
+     <!--Section: Content-->
+    
+  </div>
+  <br>
+  <br>
+  <br>
+</div><!--Final del formulario-->
+
+
+  <div class="col-md">
+    <section>
+      <br>
+      <br>
+      <h3 class="font-weight-bold text-center blue-text pb-2">¿Qué debes hacer?</h3>
+      <br>
+      <br>
+      
+      <div class="row">
+
+        <div class="col-1">
+
         </div>
+  
+        <div class="col-md-5 mx-auto">
+  
+          <ol class="step pl-0 float-right">
+            <li class="step-element pb-0">
+              <div class="step-number">
+                <span class="number">1</span>
+              </div>
+              <div class="step-excerpt">
+                <h5 class="letra1 font-weight-bold mb-4">Regístrate en nuestra plataforma</h5>
+                
+              </div>
+              
+            </li>
+         
+            <li class="step-element pb-0">
+              <div class="step-number2">
+                <span class="number">2</span>
+              </div>
+              <div class="step-excerpt">
+                <h5 class="letra2 font-weight-bold  mb-3">Completa tu solicitud</h5>
+              </div>
+            </li>
+            <li class="step-element pb-0">
+              <div class="step-number3">
+                <span class="number">3</span>
+              </div>
+              <div class="step-excerpt">
+                <h5 class="letra3 font-weight-bold mb-3">¡El préstamo es tuyo!</h5>
+              </div>
+
+            </li>
+          </ol>
+          <br>
+          <br>
+        </div>
+
+        <div class="col-md-1">
+
+
+        </div>
+                  <!--Aqui son las img-->
+        <div class="col-md-5 float-right">
+          <div class="col">
+            <img class="imagenderecha" src='../assets/compu.png'>
+          </div>
+          <div class="col">
+            <img class="imagenderecha" src='../assets/pluma.png'>
+          </div>
+          <div class="col">
+            <img class="imagenderecha" src='../assets/mano.png'>
+          </div>
+          
+  
+        </div>
+
+        <div class="mx-auto">
+          <button mdbBtn type="button" rounded="true" mdbWavesEffect style="background-color: #00DCD7; color: white;">Solicitar ahora</button>
+        </div>
+  
+      </div>
+      
+    </section>
+    <!-- Section -->
+    
+    <!--Steps-->
+  </div> <!--final de los pasos-->
+
+
+  <div class="col-lg-12 fondo2">
+   <section >
+          <br>
+          <br>
+          <br>
+        <h3 class="font-weight-bold text-center blue-text pb-2">Quiero Invertir</h3>
+          <br>
+          <br>
+          <br>
+          <br>
+   </section>
+
+  
+   <div class="col-5" style="background-color: white; " >
+
+    <form>
+      <div class="form-group">
+        <h6 style="color: #939393;" class="font-weight-bold my-4 pb-2 text-center">Importe</h6>
+        <input type="range" class="form-control-range" id="formControlRange">
+      </div>
+    </form>
+
+    <canvas mdbChart
+        [chartType]="chartType"
+        [datasets]="chartDatasets"
+        [labels]="chartLabels"
+        [colors]="chartColors"
+        [options]="chartOptions"
+        [legend]="true"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+    </canvas>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!--Final Div Principal-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container-fluid">   <!--aqui empieza el contenedor principal-->
+    <div>
+        <!--Section: Content-->
+       
+      
+      
+
+      
+      <div class="container" style="background-color:transparent;" >
+
+  <!-- Section -->
+ 
+
 </div>
+</div>
+
+
+
+
+
+<div class="container z-depth-1 my-5 pt-5 pb-3 px-5">
+
+    <!-- Section -->
+    <section>
+      
+        
+      <!-- Modal -->
+      <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+              <iframe id="player" class="embed-responsive-item" src="https://www.youtube.com/embed/7MUISDJ5ZZ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <h3 class="font-weight-bold text-center dark-grey-text pb-2">Three Easy Steps</h3>
+      <hr class="w-header my-4">
+      <p class="lead text-center text-muted pt-2 mb-5">Explore the best MDB template in the market in a short 1-minute video.</p>
+  
+      <div class="row align-items-center">
+  
+        <div class="col-lg-6 mb-4">
+          <div class="view z-depth-1-half rounded">
+            <img class="rounded img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/12-col/img%20(6).jpg" alt="Video title">
+            <div class="mask flex-center rgba-black-light">
+              <a id="play" class="btn-floating btn-primary btn-lg" data-toggle="modal" data-target="#modal1"><i class="fas fa-play"></i></a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-6 mb-4">
+  
+          <ol class="step pl-0">
+            <li class="step-element pb-0">
+              <div class="step-number">
+                <span class="number">1</span>
+              </div>
+              <div class="step-excerpt">
+                <h6 class="font-weight-bold dark-grey-text mb-3">Write your requirements</h6>
+                <p class="text-muted">Think the or organization same proposal to affected heard reclined in be it reassuring.</p>
+              </div>
+            </li>
+            <li class="step-element pb-0">
+              <div class="step-number">
+                <span class="number">2</span>
+              </div>
+              <div class="step-excerpt">
+                <h6 class="font-weight-bold dark-grey-text mb-3">Sign the contract</h6>
+                <p class="text-muted">Think the or organization same proposal to affected heard reclined in be it reassuring.</p>
+              </div>
+            </li>
+            <li class="step-element pb-0">
+              <div class="step-number">
+                <span class="number">3</span>
+              </div>
+              <div class="step-excerpt">
+                <h6 class="font-weight-bold dark-grey-text mb-3">We start developing</h6>
+                <p class="text-muted">Think the or organization same proposal to affected heard reclined in be it reassuring.</p>
+              </div>
+            </li>
+          </ol>
+  
+        </div>
+  
+      </div>
+      
+    </section>
+    <!-- Section -->
+  
+  </div>
+
+  <!--steps de inversion-->
+  <div class="container mt-5">
+
+
+  <!--Section: Content-->
+  <section class="text-center dark-grey-text">
+
+    <!-- Section heading -->
+    <h3 class="font-weight-bold mb-4 pb-2">Testimonials</h3>
+    <!-- Section description -->
+    <p class="text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam
+      eum porro a pariatur veniam.</p>
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-12 mb-4">
+        <!--Card-->
+        <div class="card testimonial-card">
+          <!--Background color-->
+          <div class="card-up info-color"></div>
+          <!--Avatar-->
+          <div class="avatar mx-auto white">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-fluid">
+          </div>
+          <div class="card-body">
+            <!--Name-->
+            <h4 class="font-weight-bold mb-4">John Doe</h4>
+            <hr>
+            <!--Quotation-->
+            <p class="dark-grey-text mt-4"><i class="fas fa-quote-left pr-2"></i>Lorem ipsum dolor sit amet eos
+              adipisci, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <!--Card-->
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <!--Card-->
+        <div class="card testimonial-card">
+          <!--Background color-->
+          <div class="card-up blue-gradient">
+          </div>
+          <!--Avatar-->
+          <div class="avatar mx-auto white">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle img-fluid">
+          </div>
+          <div class="card-body">
+            <!--Name-->
+            <h4 class="font-weight-bold mb-4">Anna Aston</h4>
+            <hr>
+            <!--Quotation-->
+            <p class="dark-grey-text mt-4"><i class="fas fa-quote-left pr-2"></i>Neque cupiditate assumenda in
+              maiores repudiandae mollitia architecto.</p>
+          </div>
+        </div>
+        <!--Card-->
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <!--Card-->
+        <div class="card testimonial-card">
+          <!--Background color-->
+          <div class="card-up indigo"></div>
+          <!--Avatar-->
+          <div class="avatar mx-auto white">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle img-fluid">
+          </div>
+          <div class="card-body">
+            <!--Name-->
+            <h4 class="font-weight-bold mb-4">Maria Kate</h4>
+            <hr>
+            <!--Quotation-->
+            <p class="dark-grey-text mt-4"><i class="fas fa-quote-left pr-2"></i>Delectus impedit saepe officiis
+              ab aliquam repellat rem unde ducimus.</p>
+          </div>
+        </div>
+        <!--Card-->
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!-- Grid row -->
+
+  </section>
+  <!--Section: Content-->
+
+
+</div>
+</div>
+
