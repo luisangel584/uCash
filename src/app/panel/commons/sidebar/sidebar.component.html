@@ -3,21 +3,34 @@
         <div class="list-group">
             <a routerLink="datos-personales"
                 class="list-group-item list-group-item-action waves-light" mdbWavesEffect>
+                Mis Préstamos
+            </a>
+        </div>
+    </mdb-card-body>
+</mdb-card>
+
+<hr>
+
+<mdb-card>
+    <mdb-card-body>
+        <div class="list-group">
+            <a [routerLink]="['datos-personales']" [routerLinkActive]="['activ']"
+                class="list-group-item list-group-item-action waves-light" mdbWavesEffect>
                 Datos Personales
             </a>
-            <a routerLink="datos-generales"
+            <a [routerLink]="['datos-generales']" [routerLinkActive]="['activ']"
                 class="list-group-item list-group-item-action waves-light" mdbWavesEffect>
                 Datos Generales
             </a>
-            <a routerLink='situacion-laboral'
+            <a [routerLink]="['situacion-laboral']" [routerLinkActive]="['activ']"
                 class="list-group-item list-group-item-action waves-light" mdbWavesEffect>
                 Situación Laboral
             </a>
-            <a routerLink="libreta-direcciones"
+            <a [routerLink]="['libreta-direcciones']" [routerLinkActive]="['activ']"
                 class="list-group-item list-group-item-action waves-light" mdbWavesEffect>
                 Libreta de Direcciones
             </a>
-            <a routerLink="datos-bancarios"
+            <a [routerLink]="['datos-bancarios']" [routerLinkActive]="['activ']"
                 class="list-group-item list-group-item-action waves-light" mdbWavesEffect>
                 Datos Bancarios
             </a>
