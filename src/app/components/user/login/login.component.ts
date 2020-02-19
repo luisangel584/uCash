@@ -30,7 +30,12 @@ export class LoginComponent implements OnInit {
 
     this.auth.loginUser(this.user)
       .subscribe((res) => {
+<<<<<<< HEAD
         this.router.navigateByUrl('/panel');
+=======
+        this.router.navigateByUrl('panel');
+        console.log(res);
+>>>>>>> panel
       },
       (err) => {
         console.log(err.error.error.message);

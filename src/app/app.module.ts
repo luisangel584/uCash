@@ -13,6 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { RegisterComponent } from './components/user/register/register.component';
+import { PanelModule } from './panel/panel.module';
 
 @NgModule({
   declarations: [
@@ -24,12 +25,13 @@ import { RegisterComponent } from './components/user/register/register.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     FormsModule,
     MDBBootstrapModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    PanelModule,
+    AppRoutingModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
