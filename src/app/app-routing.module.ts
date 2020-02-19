@@ -24,7 +24,7 @@ const routes: Routes = [
     component: ProfileComponent
   },
 
-  { path: '**', component: ProfileComponent }
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
