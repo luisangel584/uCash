@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
 
   public chartType: string = 'bar';
@@ -47,7 +48,33 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    var slider =<HTMLInputElement> document.getElementById('myRange');
+    var val =<HTMLInputElement> document.getElementById('Montocapturado');
+    val.value=slider.value;
+
+    slider.oninput = function() {
+      val.value=slider.value;
+    } 
+
+
+    var sliderMes =<HTMLInputElement> document.getElementById('RangeMes');
+    var valMes =<HTMLInputElement> document.getElementById('mescapturado');
+    valMes.value=sliderMes.value;
+
+    sliderMes.oninput = function() {
+      valMes.value=sliderMes.value;
+    } 
+
+
   }
+   
 
+  value() {
+    
+ }
 
+ 
 }
+
+

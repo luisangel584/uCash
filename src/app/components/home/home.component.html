@@ -195,20 +195,20 @@
                    <form>
                     <div class="form-group">
                       <h6 style="color: #939393;" class="font-weight-bold my-4 pb-2 text-center">Monto</h6>
-                      <input type="range" class="form-control-range" id="formControlRange">
+                      <input type="range" class="form-control-range" id="myRange" min="100" max="100000" value="70" name="myRange" step="100">
                     </div>
                   </form>
 
-                   <input type="text" id="Montocapturado" style="border: 0; text-align: center;" class="monto col-lg-4" placeholder="$" >
+                   <input type="text" id="Montocapturado" for="myRange" style="border: 0; text-align: center;" class="monto col-lg-4" placeholder="$">
 
                   <form>
                     <div class="form-group">
                       <h6 style="color: #939393;" class="font-weight-bold my-4 pb-2 text-center">Plazo</h6>
-                      <input type="range" class="form-control-range" id="formControlRange">
+                      <input type="range" class="form-control-range" id="RangeMes" min="6" max="24" value="6" name="RangeMes" step="6">
                     </div>
                   </form>
 
-                   <input type="text" id="mescapturado" style="border: 0; text-align: center;" class="mes col-lg-4" placeholder="Meses" color="#202020">
+                   <input type="text" id="mescapturado" for="RangeMes" style="border: 0; text-align: center;" class="mes col-lg-4" placeholder="Meses">
                  
                  </section>
 
@@ -432,7 +432,7 @@
           <h3 style="color: #05454C;">¡Regístrate y comienza a generar ganancias!</h3>
           <br>
           <br>
-          <div class=" float-center" style="">
+          <div class=" float-center">
             <button mdbBtn type="button" rounded="true" mdbWavesEffect style="background-color: #00DCD7; color: white; align-items: center;" >¡Lo quiero!</button>
           </div>
           
