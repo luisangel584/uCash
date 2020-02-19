@@ -24,6 +24,7 @@ const routes: Routes = [
     path: 'usuario/perfil',
     component: ProfileComponent
   },
+
   { path: '**', component: HomeComponent }
 ];
 
