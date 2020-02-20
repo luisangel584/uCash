@@ -15,7 +15,8 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: DatosPersonalesComponent
+        pathMatch: 'full',
+        redirectTo: 'datos-personales'
       },
       {
         path: 'datos-personales',
