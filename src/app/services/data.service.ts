@@ -15,14 +15,29 @@ export class DataService {
     public afDB: AngularFirestore,
     public auth: AuthService
   ) {
-    this.currentId = this.auth.getCurrentUser();
+    // this.currentId = this.auth.getCurrentUser();
+  }
+
+  firstSession(id: string, email: string) {
+    return this.afDB.doc(`datos-personales/${id}`).set({email});
   }
 
   setInitialValue(collectionName) {
-    this.afDB.doc(`${collectionName}/${this.currentId}`).set({});
+    this.currentId = this.auth.getCurrentUser();
+
+    return new Promise((res, rej) => {
+      this.afDB.doc(`${collectionName}/${this.currentId}`).set({})
+        .then(() => {
+          res();
+        })
+        .catch((err) => {
+          rej(err);
+        });
+    });
   }
 
   getDataCollection(collectionName: string) {
+    this.currentId = this.auth.getCurrentUser();
 
     return new Promise((res, rej) => {
       this.afDB.doc(`${collectionName}/${this.currentId}`).valueChanges()
@@ -37,6 +52,8 @@ export class DataService {
   }
 
   setDataCollection(collectionName: string, data: any) {
+
+    console.log(data);
 
     return new Promise((res, rej) => {
       this.afDB.doc(`${collectionName}/${this.currentId}`).set(data)
