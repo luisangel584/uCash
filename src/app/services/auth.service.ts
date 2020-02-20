@@ -38,6 +38,11 @@ export class AuthService {
     return this.http.post(
       `${this.apiRoute}:signUp?key=${this.apiKey}`,
       dataUser
+    ).pipe(
+      map((res) => {
+        this.writeToken(res['idToken']);
+        return res;
+      })
     );
   }
 
@@ -78,7 +83,7 @@ export class AuthService {
   logout() {
     localStorage.removeItem('uCashToken');
     this.readToken();
-    this.router.navigateByUrl('');
+    this.router.navigateByUrl('/ingresar');
   }
 
 }
