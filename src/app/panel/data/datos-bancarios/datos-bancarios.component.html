@@ -7,11 +7,52 @@
         </mdb-card-body>
     </mdb-card>
     <hr>
-    <form>
+    <form (ngSubmit)="onSubmit(f)" 
+    #f="ngForm">
+
+        <div class="fixed-bottom">
+            <button mdbBtn color="default" class="my-4 mr-4 float-right" type="submit">
+                <div *ngIf="loading" 
+                    class="spinner-grow spinner-grow-sm text-light" role="status">
+                    <span class="sr-only">Trabajando...</span>
+                </div>
+                <span *ngIf="!loading">
+                    Actualizar
+                </span>
+            </button>
+        </div>
+            
         <mdb-card>
             <mdb-card-body>
-                ...
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.nBanco" name="nBanco" mdbInput type="text" id="nBanco" class="form-control">
+                            <label for="nBanco" class="">Banco</label>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.nCuenta" name="nCuenta" mdbInput type="text" id="nCuenta" class="form-control">
+                            <label for="nCuenta" class="">Número de cuenta</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.nClabe" name="nClabe" mdbInput type="text" id="nClabe" class="form-control">
+                            <label for="nClabe" class="">CLABE Interbancaria</label>
+                        </div>
+                    </div>
+                </div>
             </mdb-card-body>
         </mdb-card>
+        
+        <br>
+
+        <hr>
+        
     </form>
 </div>

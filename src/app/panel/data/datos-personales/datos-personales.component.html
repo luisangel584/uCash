@@ -7,11 +7,125 @@
         </mdb-card-body>
     </mdb-card>
     <hr>
-    <form>
+    <form (ngSubmit)="onSubmit(f)" 
+    #f="ngForm">
+
+        <div class="fixed-bottom">
+            <button mdbBtn color="default" class="my-4 mr-4 float-right" type="submit">
+                <div *ngIf="loading" 
+                    class="spinner-grow spinner-grow-sm text-light" role="status">
+                    <span class="sr-only">Trabajando...</span>
+                    ...
+                </div>
+                <span *ngIf="!loading">
+                    Actualizar
+                </span>
+            </button>
+        </div>
+            
         <mdb-card>
             <mdb-card-body>
-                ...
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.nombre" name="nombre" mdbInput type="text" id="nombre" class="form-control">
+                            <label for="nombre" class="">Nombre(s)</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.apellidoP" name="apellidoP" mdbInput type="text" id="apellidoP" class="form-control">
+                            <label for="apellidoP" class="">Apellido Paterno</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.apellidoM" name="apellidoM" mdbInput type="text" id="apellidoM" class="form-control">
+                            <label for="apellidoM" class="">Apellido Materno</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.direccion" name="direccion" mdbInput type="text" id="direccion" class="form-control">
+                            <label for="direccion" class="">Dirección</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.curp" name="curp" mdbInput type="text" id="curp" class="form-control">
+                            <label for="curp" class="">CURP</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.email" name="email" mdbInput type="text" id="email" class="form-control">
+                            <label for="email" class="">Email</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.telefono" name="telefono" mdbInput type="text" id="telefono" class="form-control">
+                            <label for="telefono" class="">Telefono</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.rfc" name="rfc" mdbInput type="text" id="rfc" class="form-control">
+                            <label for="rfc" class="">RFC</label>
+                        </div>
+                    </div>
+                </div>
             </mdb-card-body>
         </mdb-card>
+        
+        <br>
+
+        <mdb-card>
+            <mdb-card-body>
+                <h2 class="h4-responsive">
+                    Identificación Oficial
+                </h2>
+                <div class="row mt-4">
+                    <div class="col">
+                        <label for="ineFrente" class="">Frente</label>
+                        <div class="">
+                            <input [(ngModel)]="info.ineFrente" name="ineFrente" mdbInput type="file" id="ineFrente" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="ineReverso" class="">Reverso</label>
+                        <div class="">
+                            <input [(ngModel)]="info.ineReverso" name="ineReverso" mdbInput type="file" id="ineReverso" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </mdb-card-body>
+        </mdb-card>
+        
+        <br>
+
+        <mdb-card>
+            <mdb-card-body>
+                <h2 class="h4-responsive">
+                    Comprobante de Domicilio
+                </h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.compDomicilio1" name="compDomicilio1" mdbInput type="file" id="compDomicilio1" class="form-control">
+                            
+                        </div>
+                    </div>
+                </div>
+            </mdb-card-body>
+        </mdb-card>
+
+
+        <hr>
+        
     </form>
 </div>
