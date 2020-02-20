@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { PanelRoutingModule } from './panel-routing.module';
@@ -24,6 +25,7 @@ import { DatosBancariosComponent } from './data/datos-bancarios/datos-bancarios.
   ],
   imports: [
     CommonModule,
+    FormsModule,
     PanelRoutingModule,
     MDBBootstrapModule
   ]
