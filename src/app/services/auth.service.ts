@@ -38,6 +38,11 @@ export class AuthService {
     return this.http.post(
       `${this.apiRoute}:signUp?key=${this.apiKey}`,
       dataUser
+    ).pipe(
+      map((res) => {
+        this.writeToken(res['idToken']);
+        return res;
+      })
     );
   }
 
