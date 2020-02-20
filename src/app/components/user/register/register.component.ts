@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { UserModel } from 'src/app/models/user-model.model';
 import { AuthService } from 'src/app/services/auth.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-register',
@@ -15,6 +16,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
+    public dataService: DataService,
     public router: Router
   ) { }
 
@@ -25,7 +27,10 @@ export class RegisterComponent implements OnInit {
   onSubmit(f) {
     this.auth.registerUser(this.user)
     .subscribe((res) => {
-      this.router.navigateByUrl('/panel');
+      this.dataService.firstSession(res['localId'], res['email'])
+        .then(() => {
+          this.router.navigateByUrl('/panel');
+        });
     }, (err) => {
       console.log(err.error.error.message);
     });
