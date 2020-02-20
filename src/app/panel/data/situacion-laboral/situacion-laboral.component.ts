@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-situacion-laboral',
@@ -7,9 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SituacionLaboralComponent implements OnInit {
 
-  constructor() { }
+  info = {};
+  loading = false;
+
+  constructor(
+    public dataService: DataService
+  ) { }
 
   ngOnInit() {
+    this.loading = true;
+    this.dataService.getDataCollection('situacion-laboral')
+      .then((resp) => {
+        this.info = resp;
+        setTimeout(() => {
+          this.loading = false;
+        }, 1000);
+      });
+  }
+
+  onSubmit() {
+    this.loading = true;
+    this.dataService.setDataCollection('situacion-laboral', this.info)
+      .then(() => {
+        setTimeout(() => {
+          this.loading = false;
+        }, 1000);
+      });
   }
 
 }
