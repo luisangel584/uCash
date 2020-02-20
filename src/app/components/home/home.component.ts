@@ -115,4 +115,6 @@ export class HomeComponent implements OnInit {
  
 }
 
-
+export class CarouselComponent {
+  stars = Array(5);
+}
