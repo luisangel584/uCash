@@ -78,7 +78,7 @@ export class AuthService {
   logout() {
     localStorage.removeItem('uCashToken');
     this.readToken();
-    this.router.navigateByUrl('');
+    this.router.navigateByUrl('/ingresar');
   }
 
 }
