@@ -1,0 +1,75 @@
+<div>
+    <mdb-card>
+        <mdb-card-body>
+            <h2 class="h2-responsive">
+                Libreta de Direcciones
+            </h2>
+        </mdb-card-body>
+    </mdb-card>
+    <hr>
+    <form (ngSubmit)="onSubmit(f)" 
+    #f="ngForm">
+
+        <div class="fixed-bottom">
+            <button mdbBtn color="default" class="my-4 mr-4 float-right" type="submit">
+                <div *ngIf="loading" 
+                    class="spinner-grow spinner-grow-sm text-light" role="status">
+                    <span class="sr-only">Trabajando...</span>
+                    ...
+                </div>
+                <span *ngIf="!loading">
+                    Actualizar
+                </span>
+            </button>
+        </div>
+            
+        <mdb-card>
+            <mdb-card-body>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.calle" name="calle" mdbInput type="text" id="calle" class="form-control">
+                            <label for="calle" class="">Calle</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.numero" name="numero" mdbInput type="text" id="numero" class="form-control">
+                            <label for="numero" class="">Número</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.colonia" name="colonia" mdbInput type="text" id="colonia" class="form-control">
+                            <label for="colonia" class="">Colonia</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.estado" name="estado" mdbInput type="text" id="estado" class="form-control">
+                            <label for="estado" class="">Estado</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.ciudad" name="ciudad" mdbInput type="text" id="ciudad" class="form-control">
+                            <label for="ciudad" class="">Ciudad</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.cp" name="cp" mdbInput type="text" id="cp" class="form-control">
+                            <label for="cp" class="">Código Postal</label>
+                        </div>
+                    </div>
+                </div>
+            </mdb-card-body>
+        </mdb-card>
+       
+        <br>
+        <hr>
+        
+    </form>
+</div>

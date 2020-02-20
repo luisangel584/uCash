@@ -1,0 +1,41 @@
+.logoStyle{
+    display: block;
+    width: 100px;
+    height: 61px;
+    color: 
+    transparent;
+    font: 0/0 ;
+    text-shadow: none;
+}
+
+.logoStyleFooter{
+    display: block;
+    width: 231px;
+    height: 140px;
+    color: 
+    transparent;
+    font: 0/0 ;
+    text-shadow: black;
+}
+
+.footerstyle{
+    display: flex;
+    background: url('../assets/footerbg.png') no-repeat;
+    background-size: 100% 100%;
+    width: auto;
+    color: white;
+    height: auto;
+  }
+.footercontent{
+    margin-top:100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.copyBg{
+    background-color: #00434B;
+    
+}
+.borderSocials{
+    border-top: 1px solid #66D298;
+}

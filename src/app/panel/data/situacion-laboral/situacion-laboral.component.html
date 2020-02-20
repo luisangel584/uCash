@@ -1,0 +1,136 @@
+<div>
+    <mdb-card>
+        <mdb-card-body>
+            <h2 class="h2-responsive">
+                Situación Laboral
+            </h2>
+        </mdb-card-body>
+    </mdb-card>
+    <hr>
+    <form (ngSubmit)="onSubmit(f)" 
+    #f="ngForm">
+
+        <div class="fixed-bottom">
+            <button mdbBtn color="default" class="my-4 mr-4 float-right" type="submit">
+                <div *ngIf="loading" 
+                    class="spinner-grow spinner-grow-sm text-light" role="status">
+                    <span class="sr-only">Trabajando...</span>
+                    ...
+                </div>
+                <span *ngIf="!loading">
+                    Actualizar
+                </span>
+            </button>
+        </div>
+            
+        <mdb-card>
+            <mdb-card-body>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.compania" name="compania" mdbInput type="text" id="compania" class="form-control">
+                            <label for="compania" class="">Compañía</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.ocupacion" name="ocupacion" mdbInput type="text" id="ocupacion" class="form-control">
+                            <label for="ocupacion" class="">Ocupación</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.puesto" name="puesto" mdbInput type="text" id="puesto" class="form-control">
+                            <label for="puesto" class="">Puesto</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.antiguedad" name="antiguedad" mdbInput type="text" id="antiguedad" class="form-control">
+                            <label for="antiguedad" class="">Antiguedad</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        
+                    </div>
+                    <div class="col">
+                        
+                    </div>
+                </div>
+            </mdb-card-body>
+        </mdb-card>
+        
+        <br>
+
+        <mdb-card>
+            <mdb-card-body>
+                <h2 class="h4-responsive">
+                    Empresa
+                </h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.industria" name="industria" mdbInput type="text" id="industria" class="form-control">
+                            <label for="industria" class="">Industria</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.nEmpleados" name="nEmpleados" mdbInput type="text" id="nEmpleados" class="form-control">
+                            <label for="nEmpleados" class="">Número de Empleados</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.domicilio" name="domicilio" mdbInput type="text" id="domicilio" class="form-control">
+                            <label for="domicilio" class="">Domicilio de la Empresa</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.telEmpresa" name="telEmpresa" mdbInput type="text" id="telEmpresa" class="form-control">
+                            <label for="telEmpresa" class="">Telefono de la Empresa</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.extEmpresa" name="extEmpresa" mdbInput type="text" id="extEmpresa" class="form-control">
+                            <label for="extEmpresa" class="">Telefono de la Empresa</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.mailEmpresa" name="mailEmpresa" mdbInput type="text" id="mailEmpresa" class="form-control">
+                            <label for="mailEmpresa" class="">Telefono de la Empresa</label>
+                        </div>
+                    </div>
+                </div>
+            </mdb-card-body>
+        </mdb-card>
+        
+        <br>
+
+        <mdb-card>
+            <mdb-card-body>
+                <h2 class="h4-responsive">
+                    Ingresos
+                </h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.comprobanteI1" name="comprobanteI1" mdbInput type="text" id="comprobanteI1" class="form-control">
+                            <label for="comprobanteI1" class="">Comprobante de Ingresos</label>
+                        </div>
+                    </div>
+                </div>
+            </mdb-card-body>
+        </mdb-card>
+
+        <hr>
+        
+    </form>
+</div>
