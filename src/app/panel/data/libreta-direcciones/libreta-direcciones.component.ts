@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
+import { LibretaDireccionesModel } from 'src/app/models/libreta-direcciones-model.model';
 
 @Component({
   selector: 'app-libreta-direcciones',
@@ -8,7 +9,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class LibretaDireccionesComponent implements OnInit {
 
-  info = {};
+  info: LibretaDireccionesModel;
   loading = false;
 
   constructor(
@@ -26,7 +27,7 @@ export class LibretaDireccionesComponent implements OnInit {
       });
   }
 
-  onSubmit() {
+  onSubmit(f) {
     this.loading = true;
     this.dataService.setDataCollection('libreta-direcciones', this.info)
       .then(() => {
