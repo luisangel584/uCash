@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { RegisterComponent } from './components/user/register/register.component';
+import { PanelModule } from './panel/panel.module';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
     path: 'usuario/perfil',
     component: ProfileComponent
   },
+
   { path: '**', component: HomeComponent }
 ];
 

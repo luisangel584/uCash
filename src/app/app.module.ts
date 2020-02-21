@@ -13,7 +13,8 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { RegisterComponent } from './components/user/register/register.component';
-import { PrestamoComponent } from './src/components/prestamos/prestamo/prestamo.component';
+import { PrestamoComponent } from './components/prestamo/prestamo.component';
+import { PanelModule } from './panel/panel.module';
 
 @NgModule({
   declarations: [
@@ -26,12 +27,13 @@ import { PrestamoComponent } from './src/components/prestamos/prestamo/prestamo.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     FormsModule,
     MDBBootstrapModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    PanelModule,
+    AppRoutingModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

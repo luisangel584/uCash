@@ -1,0 +1,203 @@
+<div>
+    <mdb-card>
+        <mdb-card-body>
+            <h2 class="h2-responsive">
+                Datos Generales
+            </h2>
+        </mdb-card-body>
+    </mdb-card>
+    <hr>
+    <form (ngSubmit)="onSubmit(f)" 
+    #f="ngForm">
+
+        <div class="fixed-bottom">
+            <button mdbBtn color="default" class="my-4 mr-4 float-right" type="submit">
+                <div *ngIf="loading" 
+                    class="spinner-grow spinner-grow-sm text-light" role="status">
+                    <span class="sr-only">Trabajando...</span>
+                    ...
+                </div>
+                <span *ngIf="!loading">
+                    Actualizar
+                </span>
+            </button>
+        </div>
+            
+        <mdb-card>
+            <mdb-card-body>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.sexo" name="sexo" mdbInput type="text" id="sexo" class="form-control">
+                            <label for="sexo" class="">Sexo</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.fnacimiento" name="fnacimiento" mdbInput type="date" id="fnacimiento" class="form-control">
+                            <label for="fnacimiento" class="">Fecha de nacimiento</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.edad" name="edad" mdbInput type="number" id="edad" class="form-control">
+                            <label for="edad" class="">Edad</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.nacionalidad" name="nacionalidad" mdbInput type="text" id="nacionalidad" class="form-control">
+                            <label for="nacionalidad" class="">Nacionalidad</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.ndependientes" name="ndependientes" mdbInput type="number" id="ndependientes" class="form-control">
+                            <label for="ndependientes" class="">N. de dependientes</label>
+                        </div>
+                    </div>
+                </div>
+            </mdb-card-body>
+        </mdb-card>
+        
+        <br>
+
+        <mdb-card>
+            <mdb-card-body>
+                <h2 class="h4-responsive">
+                    Empresa
+                </h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input mdbInput type="text" id="form1" class="form-control">
+                            <label for="form1" class="">Empresa</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input mdbInput type="text" id="form1" class="form-control">
+                            <label for="form1" class="">Domicilio</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input mdbInput type="text" id="form1" class="form-control">
+                            <label for="form1" class="">Tipo de domicilio</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input mdbInput type="text" id="form1" class="form-control">
+                            <label for="form1" class="">Email de la empresa</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input mdbInput type="text" id="form1" class="form-control">
+                            <label for="form1" class="">Telefono de la empresa</label>
+                        </div>
+                    </div>
+                </div>
+            </mdb-card-body>
+        </mdb-card>
+        
+        <br>
+
+        <mdb-card>
+            <mdb-card-body>
+                <h2 class="h4-responsive">
+                    Propiedades
+                </h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.pdireccion" name="pdireccion" mdbInput type="text" id="pdireccion" class="form-control">
+                            <label for="pdireccion" class="">Dirección</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.pResDomicilio" name="pResDomicilio" mdbInput type="number" id="pResDomicilio" class="form-control" placeholder="(Especificado en años)">
+                            <label for="pResDomicilio" class="">Residencia en domicilio</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.pResCiudad" name="pResCiudad" mdbInput type="number" id="pResCiudad" class="form-control" placeholder="(Especificado en años)">
+                            <label for="pResCiudad" class="">Residencia en la ciudad</label>
+                        </div>
+                    </div>
+                </div>
+            </mdb-card-body>
+        </mdb-card>
+
+        <br>
+
+        <mdb-card>
+            <mdb-card-body>
+                <h2 class="h4-responsive">
+                    Beneficiario
+                </h2>
+                <div class="row">
+                    <div class="col-md-1">
+                        <div class="md-form">
+                            <label for="form1" class="">1</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.benNombre1" name="benNombre1" mdbInput type="text" id="benNombre1" class="form-control">
+                            <label for="benNombre1" class="">Nombre</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.benDireccion1" name="benDireccion1" mdbInput type="text" id="benDireccion1" class="form-control" >
+                            <label for="benDireccion1" class="">Dirección</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.benTel1" name="benTel1" mdbInput type="text" id="benTel1" class="form-control" >
+                            <label for="benTel1" class="">Telefono</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1">
+                        <div class="md-form">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.benEmail1" name="benEmail1" mdbInput type="text" id="benEmail1" class="form-control">
+                            <label for="benEmail1" class="">Email</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.benCivil1" name="benCivil1" mdbInput type="text" id="benCivil1" class="form-control" >
+                            <label for="benCivil1" class="">Estado Civil</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input [(ngModel)]="info.benPorcentaje1" name="benPorcentaje1" mdbInput type="number" id="benPorcentaje1" class="form-control" value="100">
+                            <label for="benPorcentaje1" class="">Porcentaje de beneficio %</label>
+                        </div>
+                    </div>
+                </div>
+            </mdb-card-body>
+        </mdb-card>
+
+        <hr>
+        
+    </form>
+</div>
+
+
