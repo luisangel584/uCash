@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
+import { DatosGeneralesModel } from 'src/app/models/datos-generales-model.model';
 
 @Component({
   selector: 'app-datos-generales',
@@ -8,7 +9,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class DatosGeneralesComponent implements OnInit {
 
-  info = {};
+  info: DatosGeneralesModel;
   loading = false;
 
   constructor(
@@ -26,7 +27,7 @@ export class DatosGeneralesComponent implements OnInit {
       });
   }
 
-  onSubmit() {
+  onSubmit(f) {
     this.loading = true;
     this.dataService.setDataCollection('datos-generales', this.info)
       .then(() => {
