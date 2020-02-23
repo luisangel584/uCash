@@ -1,0 +1,11 @@
+.alert {
+    transition: 0.3s;
+    opacity: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.showAlert {
+    transition: 0.3s;
+    opacity: 1;
+}
