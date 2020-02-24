@@ -10,28 +10,31 @@
           <!--Grid column-->
           <div class="col-md-12 mb-4">
 
-            <div style="z-index: 2; top: -70px" class="avatar mx-auto col-md-2">
+            <div style="z-index: 2; top: 0px" class="avatar mx-auto col-md-2 fixed-top">
               <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="img-fluid rounded-circle z-depth-1" alt="First sample avatar image">
             </div>
-            <h3 class="my-3 font-weight-bold">
-              <strong>Hola!</strong>
-            </h3>
 
+            
 
-            <h4 class="font-weight-bold teal-text mb-4">Datos personales</h4>
+            <br>
 
-            <div class="col-18 my-3">
+            <!-- <h3 class="my-3 font-weight-bold" *ngFor="let usuario of users | async">
+              <strong>¡Hola {{ usuario.nombre }}!</strong>
+            </h3> -->
+            
+
+            <div class="col-12 my-3">
 
                   <!-- Nav tabs -->
-                  <div class="nav nav-tabs md-tabs">
+                  <!-- <div class="nav nav-tabs md-tabs">
 
-                      <ul class="nav" role="tablist" >
+                      <ul class="nav" role="tablist" id="myTab" >
                           <li class="nav-item">
-                              <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab" TARGET="_self">
-                                <i class="fas fa-user"></i> Datos personales</a>
+                              <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">
+                                <i class="fas fa-user"></i> General</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link waves-light waves-effect waves-light" data-toggle="tab " href="app.component.html#panel2" role="tab" TARGET="_self">
+                              <a class="nav-link waves-light waves-effect waves-light" data-toggle="tab" href="#panel2" role="tab" TARGET="_self">
                                 <i class="fas fa-map-marker-alt"></i> Domicilio</a>
                           </li>
                           <li class="nav-item">
@@ -43,43 +46,45 @@
                                 <i class="fas fa-money-check-alt"></i> Datos bancarios</a>
                           </li>
                       </ul>
-                  </div>
+                  </div> -->
                   <!-- Tab panels -->
                   <div class="tab-content card" style="border-color:deepskyblue !important">
+
                       <!--Panel 1-->
-                      <div class="tab-pane fade in show active col-md" id="panel1" role="tabpanel">
+                      <div class="tab-pane fade in show active col-md" id="panel1" role="tabpanel" *ngFor="let usuario of users | async">
                         <br>
+                        <h2 class="teal-text fas fa-user"></h2><h6 class="font-weight-bold teal-text mb-4">Información personal</h6> 
                         <div class="row">
 
                             <!--Grid column-->
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-6 mb-4">
 
                                 <div class="md-form">
-                                    <label type="text" id="form1" >SONIA</label>
-                                    <label for="form1" class="active font-weight-bold">Nombre (s)</label>
+                                    <label type="text" id="form1" >{{ usuario.nombre }} {{ usuario.apellidopaterno }} {{ usuario.apellidomaterno }}</label>
+                                    <label for="form1" class="active font-weight-bold">Nombre</label>
                                 </div>
 
                             </div>
                             <!--Grid column-->
 
                             <!--Grid column-->
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-3 mb-4">
 
-                                <div class="md-form form">
-                                    <label type="text" id="form2" >HERNANDEZ</label>
-                                    <label for="form2" class="active font-weight-bold">Apellido paterno</label>
-                                </div>
+                              <div class="md-form">
+                                <label type="text" id="form4" disabled="disabled">{{ usuario.telefono }}</label>
+                                <label for="form4" class="active font-weight-bold">Telefono</label>
+                              </div>
 
                             </div>
                             <!--Grid column-->
 
                             <!--Grid column-->
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-3 mb-4">
 
-                                <div class="md-form">
-                                    <label type="text" id="form3" >HERNANDEZ</label>
-                                    <label for="form3" class="active font-weight-bold">Apellido materno</label>
-                                </div>
+                              <div class="md-form">
+                                <label type="text" id="form5">{{ usuario.email }}</label>
+                                <label for="form5" class="active font-weight-bold">Correo</label>
+                              </div>
 
                             </div>
                             <!--Grid column-->
@@ -91,33 +96,33 @@
                         
 
                             <!--Grid column-->
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-6 mb-4">
 
                                 <div class="md-form">
-                                    <label type="text" id="form4" disabled="disabled">3320202020</label>
-                                    <label for="form4" class="active font-weight-bold">Telefono</label>
+                                    <label type="text" id="form4" disabled="disabled">{{ usuario.direccion }} {{usuario.colonia}}</label>
+                                    <label for="form4" class="active font-weight-bold">Dirección</label>
                                 </div>
 
                             </div>
                             <!--Grid column-->
 
                             <!--Grid column-->
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-3 mb-4">
 
                                 <div class="md-form">
-                                    <label type="text" id="form5">ejemplo@hotmail.com</label>
-                                    <label for="form5" class="active font-weight-bold">Correo</label>
+                                    <label type="text" id="form5">{{usuario.ciudad}} {{usuario.estado}}</label>
+                                    <label for="form5" class="active font-weight-bold">Ciudad</label>
                                 </div>
 
                             </div>
                             <!--Grid column-->
 
                             <!--Grid column-->
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-3 mb-4">
 
                                 <div class="md-form">
-                                    <label type="text" id="form6" >HEHS920212LOV</label>
-                                    <label for="form6" class="active font-weight-bold">RFC</label>
+                                    <label type="text" id="form6" >{{ usuario.cp }}</label>
+                                    <label for="form6" class="active font-weight-bold">Código postal</label>
                                 </div>
 
                             </div>
@@ -127,13 +132,54 @@
 
                         <br>
                         <br>
+                        <br>
+                        <h2 class="teal-text fas fa-id-card"></h2><h6 class="font-weight-bold teal-text mb-4">Referencias personales</h6>
+                        <div class="row" *ngFor="let referencia of userRef | async" >
+
+                          <div class="col-md-4 mb-4">
+
+                            <div class="md-form">
+                                <label type="text" id="form6" >{{ referencia.nombre }}</label>
+                                <label for="form6" class="active font-weight-bold">Nombre </label>
+                            </div>
+
+                          </div>
+
+                          <div class="col-md-4 mb-4">
+
+                            <div class="md-form">
+                                <label type="text" id="form6" >{{ referencia.parentesco }}</label>
+                                <label for="form6" class="active font-weight-bold">Parentesco o relación  </label>
+                            </div>
+
+                          </div>
+
+                          <div class="col-md-4 mb-4">
+
+                            <div class="md-form">
+                                <label type="text" id="form6" >{{ referencia.telefono }}</label>
+                                <label for="form6" class="active font-weight-bold">Telefono celular</label>
+                            </div>
+
+                          </div>
+
+
+
+
+                        </div>
+
+
+                        <br>
+                        <br>
+                        <h2 class="teal-text far fa-copy"></h2><h6 class="font-weight-bold teal-text mb-4">Documentos</h6>
+
                         <div class="row">
 
                           <div class="col-md-6 mb-4">
 
                             <div class="md-form">
                               <label for="form7" class="active text-center font-weight-bold">INE Anverso</label><br>
-                              <img src="../assets/sources/untitled1.png" class="rounded mx-auto" style="width: 258px; height: 162px">
+                              <img [src]="usuario.ine1" class="rounded mx-auto" style="width: 258px; height: 162px">
                             </div>
 
                           </div>
@@ -142,7 +188,7 @@
 
                             <div class="md-form">
                               <label for="form8" class="active text-center font-weight-bold">INE Reverso</label><br>
-                              <img src="../assets/sources/untitled2.png" class="rounded mx-auto" style="width: 258px; height: 162px">
+                              <img [src]="usuario.ine2" class="rounded mx-auto" style="width: 258px; height: 162px">
                             </div>
 
                           </div>
@@ -154,6 +200,8 @@
 
                       </div>
                       <!--/.Panel 1-->
+
+
                       <!--Panel 2-->
                       <div class="tab-pane fade" id="panel2" role="tabpanel">
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus
@@ -179,12 +227,16 @@
                       </div>
                       <!--/.Panel 4-->
                   </div>
-              </div>
+            </div>
 
               
 
 
             <!-- TABTABTABTATABTABTABTAB -->
+
+
+    
+
 
 
 

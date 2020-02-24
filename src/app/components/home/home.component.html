@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style>
 
     .btn {
@@ -195,20 +196,20 @@
                    <form>
                     <div class="form-group">
                       <h6 style="color: #939393;" class="font-weight-bold my-4 pb-2 text-center">Monto</h6>
-                      <input type="range" class="form-control-range" id="formControlRange">
+                      <input type="range" class="form-control-range" id="myRange" min="100" max="100000" value="10000" name="myRange" step="100">
                     </div>
                   </form>
 
-                   <input type="text" id="Montocapturado" style="border: 0; text-align: center;" class="monto col-lg-4" placeholder="$" >
+                   <input type="text" id="Montocapturado" for="myRange" style="border: 0; text-align: center;" class="monto col-lg-4" placeholder="$">
 
                   <form>
                     <div class="form-group">
                       <h6 style="color: #939393;" class="font-weight-bold my-4 pb-2 text-center">Plazo</h6>
-                      <input type="range" class="form-control-range" id="formControlRange">
+                      <input type="range" class="form-control-range" id="RangeMes" min="6" max="24" value="6" name="RangeMes" step="6">
                     </div>
                   </form>
 
-                   <input type="text" id="mescapturado" style="border: 0; text-align: center;" class="mes col-lg-4" placeholder="Meses" color="#202020">
+                   <input type="text" id="mescapturado" for="RangeMes" style="border: 0; text-align: center;" class="mes col-lg-4" placeholder="Meses">
                  
                  </section>
 
@@ -222,7 +223,7 @@
                  <div class="md-form">
                      <!-- calculo -->
                      <h6 style="color: #939393;" class="active font-weight-bold">Mensualidad</h6>
-                    <input type="text" id="calculo " class="form-control" placeholder="$" disabled>
+                    <input for="RangeMes" type="text" id="calculo" class="form-control" placeholder="$" disabled value="">
                          
                  </div>
                </div>
@@ -281,11 +282,11 @@
       
       <div class="row">
 
-        <div class="col-1">
+        <div class="col-2">
 
         </div>
-  
-        <div class="col-md-5 mx-auto">
+    
+        <div class="col-5">
   
           <ol class="step pl-0 float-right">
             <li class="step-element pb-0">
@@ -321,12 +322,9 @@
           <br>
         </div>
 
-        <div class="col-md-1">
 
-
-        </div>
                   <!--Aqui son las img-->
-        <div class="col-md-5 float-right">
+        <div class="col">
           <div class="col">
             <img class="imagenderecha" src='../assets/compu.png'>
           </div>
@@ -339,11 +337,13 @@
           
   
         </div>
+      </div>
 
-        <div class="mx-auto">
-          <button mdbBtn type="button" rounded="true" mdbWavesEffect style="background-color: #00DCD7; color: white;">Solicitar ahora</button>
-        </div>
-  
+
+      <div class="col" style="text-align: center;">
+        <br>
+
+        <button mdbBtn type="button" rounded="true" mdbWavesEffect style="background-color: #00DCD7; color: white; align-items: center;">Solicitar ahora</button>
       </div>
       
     </section>
@@ -351,9 +351,12 @@
     
     <!--Steps-->
   </div> <!--final de los pasos-->
-
+  <br>
+  <br>
+  <br>
 
   <div class="col-lg-12 fondo2">
+    
    <section >
           <br>
           <br>
@@ -364,10 +367,14 @@
           <br>
           <br>
           
-      <div class="col-4">
-          <div class="card">
+      <div class="row">
+
+            <div class="col-2">
+
+            </div>
+          <div class="card col-3">
               <!--Card content-->
-              <div class="card-body z-depth-1-half">
+              <div class="card-body z-depth-2-half">
   
                 <!-- Form -->
                 <form class="text-center" style="color: #757575;">
@@ -408,6 +415,31 @@
                 <!-- Form -->
             </div>
         </div>
+
+        <div class="col-1"></div>
+
+
+
+        <div class="col-6">
+          <label for="" style="color: #05454C;">Ucash te permite realizar inversiones</label>
+          <br>
+          <label for="" style="color: #05454C;">desde $100 a plazos desde 6 meses con </label>
+          <br>
+          <label for="" style="color: #05454C;">una tasa de rendimiento muy atractiva </label>
+          <br>
+          <label for="" style="color: #05454C;">y de manera confiable.</label>
+          <br>
+          <h3 style="color: #05454C;">¡Regístrate y comienza a generar ganancias!</h3>
+          <br>
+          <br>
+          <div class=" float-center">
+            <button mdbBtn type="button" rounded="true" mdbWavesEffect style="background-color: #00DCD7; color: white; align-items: center;" >¡Lo quiero!</button>
+          </div>
+          
+
+        </div>
+
+
             <!-- Material form login -->
       </div>
 
@@ -432,7 +464,7 @@
 
 
 
-  <div class="col-md">
+  <div class="col-md"><!--como invertir-->
     <section>
       <br>
       <br>
@@ -442,11 +474,11 @@
       
       <div class="row">
 
-        <div class="col-1">
+        <div class="col-2">
 
         </div>
   
-        <div class="col-md-5 mx-auto">
+        <div class="col-5">
   
           <ol class="step pl-0 float-right">
             <li class="step-element pb-0">
@@ -482,12 +514,10 @@
           <br>
         </div>
 
-        <div class="col-md-1">
+        <div class="col-1"></div>
 
-
-        </div>
                   <!--Aqui son las img-->
-        <div class="col-md-5 float-right">
+        <div class="col">
           <div class="col">
             <img class="imagenderecha" src='../assets/calculadora.png'>
           </div>
@@ -500,154 +530,305 @@
           
   
         </div>
-  
-      </div>
+
       
+      </div>
+
     </section>
     <!-- Section -->
     
     <!--Steps-->
-  </div> <!--final de los pasos-->
+  </div> <!--final como invertir-->
   
 
-    <div class="">
-
+    <div class=""><!--Testimonios-->
 
   <!--Section: Content-->
   <section class="text-center dark-grey-text fondo3">
     <br>
+ <!-- Section: Testimonials -->
+<section class="container text-center my-5 mt-5">
+  <!-- Section heading -->
+  <h2 class="font-weight-bold mb-4 pb-2" style="color: #00D397;">Testimonios</h2>
+  <!-- Grid row -->
+  <div class="row">
+    <!--Carousel Wrapper-->
+    <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation testimonial-carousel" [type]="'carousel-multi-item'"
+      [animation]="'slide'">
+      <!--First slide-->
+      <mdb-slide>
+        <!--Grid column-->
+        <div class="col-md-4">
+          <div class=" card testimonial">
+            <!--Avatar-->
+            <div class="avatar mx-auto">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(25).jpg" class="rounded-circle img-fluid">
+            </div>
+            <!--Content-->
+            <h4 class="font-weight-bold mt-4">Anna Deynah</h4>
+            <h6 class="blue-text font-weight-bold my-3">Web Designer</h6>
+            <p class="font-weight-normal">
+              <mdb-icon fas icon="quote-left" class="pr-2"></mdb-icon>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Quod eos
+              id officiis hic tenetur.</p>
+            <!--Review-->
+            <div class="grey-text">
+              <mdb-icon fas [icon]="i == 4 ? 'star-half' : 'star'"   *ngFor="let star of stars; let i = index"></mdb-icon>
+            </div>
+          </div>
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-md-4 clearfix d-none d-md-block">
+          <div class="card testimonial">
+            <!--Avatar-->
+            <div class="avatar mx-auto">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" class="rounded-circle img-fluid">
+            </div>
+            <!--Content-->
+            <h4 class="font-weight-bold mt-4">John Doe</h4>
+            <h6 class="blue-text font-weight-bold my-3">Web Developer</h6>
+            <p class="font-weight-normal">
+              <mdb-icon fas icon="quote-left" class="pr-2"></mdb-icon>Ut enim ad minima veniam, quis nostrum exercitationem ullam
+              corporis
+              laboriosam.</p>
+            <!--Review-->
+            <div class="grey-text">
+              <mdb-icon fas icon="star" *ngFor="let star of stars; let i = index"></mdb-icon>
+            </div>
+          </div>
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-md-4 clearfix d-none d-md-block">
+          <div class="card testimonial">
+            <!--Avatar-->
+            <div class="avatar mx-auto">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" class="rounded-circle img-fluid">
+            </div>
+            <!--Content-->
+            <h4 class="font-weight-bold mt-4">Abbey Clark</h4>
+            <h6 class="blue-text font-weight-bold my-3">Photographer</h6>
+            <p class="font-weight-normal">
+              <mdb-icon fas icon="quote-left" class="fas fa-quote-left pr-2"></mdb-icon>Quis autem vel eum iure reprehenderit qui in ea voluptate
+              velit esse
+              quam nihil molestiae.</p>
+            <!--Review-->
+            <div class="grey-text">
+              <mdb-icon fas [icon]="i == 4 ? 'star-o' : 'star' " *ngFor="let star of stars; let i = index"></mdb-icon>
+            </div>
+          </div>
+        </div>
+        <!--Grid column-->
+      </mdb-slide>
+      <!--/First slide-->
+      <!--Second slide-->
+      <mdb-slide>
+        <div class="col-md-4">
+          <div class="card testimonial">
+            <!--Avatar-->
+            <div class="avatar mx-auto">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(4).jpg" class="rounded-circle img-fluid">
+            </div>
+            <!--Content-->
+            <h4 class="font-weight-bold mt-4">Blake Dabney</h4>
+            <h6 class="blue-text font-weight-bold my-3">Web Designer</h6>
+            <p class="font-weight-normal">
+              <mdb-icon fas icon="quote-elft" class="pr-2"></mdb-icon>Ut enim ad minima veniam, quis nostrum exercitationem ullam
+              corporis
+              laboriosam.</p>
+            <!--Review-->
+            <div class="grey-text">
+              <mdb-icon fas [icon]="i == 4 ? 'star-half' : 'star'"   *ngFor="let star of stars; let i = index"></mdb-icon>
+            </div>
+          </div>
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-md-4 clearfix d-none d-md-block">
+          <div class="card testimonial">
+            <!--Avatar-->
+            <div class="avatar mx-auto">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(6).jpg" class="rounded-circle img-fluid">
+            </div>
+            <!--Content-->
+            <h4 class="font-weight-bold mt-4">Andrea Clay</h4>
+            <h6 class="blue-text font-weight-bold my-3">Front-end developer</h6>
+            <p class="font-weight-normal">
+              <mdb-icon fas icon="quote-left" class="pr-2"></mdb-icon>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Quod eos
+              id officiis hic tenetur
+              quae.</p>
+            <!--Review-->
+            <div class="grey-text">
+              <mdb-icon fas icon="star" *ngFor="let star of stars; let i = index"></mdb-icon>
+            </div>
+          </div>
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-md-4 clearfix d-none d-md-block">
+          <div class="card testimonial">
+            <!--Avatar-->
+            <div class="avatar mx-auto">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(7).jpg" class="rounded-circle img-fluid">
+            </div>
+            <!--Content-->
+            <h4 class="font-weight-bold mt-4">Cami Gosse</h4>
+            <h6 class="blue-text font-weight-bold my-3">Phtographer</h6>
+            <p class="font-weight-normal">
+              <mdb-icon fas icon="quote-left" class="pr-2"></mdb-icon>At vero eos et accusamus et iusto odio dignissimos ducimus
+              qui
+              blanditiis praesentium.</p>
+            <!--Review-->
+            <div class="grey-text">
+              <mdb-icon fas [icon]="star == 4 ? 'star-o' : 'star'" *ngFor="let star of stars; let i = index"></mdb-icon>
+            </div>
+          </div>
+        </div>
+        <!--Grid column-->
+      </mdb-slide>
+      <!--/Second slide-->
+      <!--Third slide-->
+      <mdb-slide>
+        <!--Grid column-->
+        <div class="col-md-4">
+          <div class="card testimonial">
+            <!--Avatar-->
+            <div class="avatar mx-auto">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(8).jpg" class="rounded-circle img-fluid">
+            </div>
+            <!--Content-->
+            <h4 class="font-weight-bold mt-4">Bobby Haley</h4>
+            <h6 class="blue-text font-weight-bold my-3">Web Developer</h6>
+            <p class="font-weight-normal">
+              <mdb-icon fas icon="quote-left" class="pr-2"></mdb-icon>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Quod eos
+              id officiis hic tenetur
+              quae.</p>
+            <!--Review-->
+            <div class="grey-text">
+              <mdb-icon fas icon="star" *ngFor="let star of stars; let i = index"></mdb-icon>
+            </div>
+          </div>
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-md-4 clearfix d-none d-md-block">
+          <div class="card testimonial">
+            <!--Avatar-->
+            <div class="avatar mx-auto">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle img-fluid">
+            </div>
+            <!--Content-->
+            <h4 class="font-weight-bold mt-4">Elisa Janson</h4>
+            <h6 class="blue-text font-weight-bold my-3">Marketer</h6>
+            <p class="font-weight-normal">
+              <mdb-icon fas icon="quote-left" class="pr-2"></mdb-icon>At vero eos et accusamus et iusto odio dignissimos ducimus
+              qui
+              blanditiis praesentium.</p>
+            <!--Review-->
+            <div class="grey-text">
+              <mdb-icon fas [icon]="star == 4 ? 'star-half' : 'star'" *ngFor="let star of stars; let i = index"></mdb-icon>
+            </div>
+          </div>
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-md-4 clearfix d-none d-md-block">
+          <div class="card testimonial">
+            <!--Avatar-->
+            <div class="avatar mx-auto">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-fluid">
+            </div>
+            <!--Content-->
+            <h4 class="font-weight-bold mt-4">Rob Jacobs</h4>
+            <h6 class="blue-text font-weight-bold my-3">Front-end developer</h6>
+            <p class="font-weight-normal">
+              <mdb-icon fas icon="quote-left" class="pr-2"></mdb-icon>Ut enim ad minima veniam, quis nostrum exercitationem ullam
+              corporis
+              laboriosam.</p>
+            <!--Review-->
+            <div class="grey-text">
+              <mdb-icon fas [icon]="star == 4 ? 'star-o' : 'star'" *ngFor="let star of stars; let i = index"></mdb-icon>
+            </div>
+          </div>
+        </div>
+        <!--Grid column-->
+      </mdb-slide>
+      <!--/Third slide-->
+    </mdb-carousel>
+    <!--/.Carousel Wrapper-->
+  </div>
+  <!-- Grid row -->
+</section>
+<!-- Section: Testimonials v.4 -->
+    <!-- Grid row -->
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
 
 
-    <!-- Section heading -->
-    <h1 class="font-weight-bold mb-4 pb-2" style="color: #00D397;">Testimonios</h1>
+    <div class="row"> <!--Ultimas imagenes-->
+      <div class="col-3">
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <img class="imagenderecha" src='../assets/manos.png'>
+        <br>
+        <b><label for="" style="color: #05454C;">Plataforma confiable</label></b> 
+      </div>
+      <div class="col-3">
+        <br>
+        <br>
+        <br>
+        <img class="imagenderecha" src='../assets/notas.png'>
+        <br>
+        <b><label for="" style="color: #05454C;">Solicitud rápida y sencilla</label></b> 
+      </div>
+      <div class="col-3">
+        <br>
+        <br>
+        <br>
+        
+        <img class="imagenderecha" src='../assets/tasabajo.png'>
+        <br>
+        <b><label for="" style="color: #05454C;">Tasa de interés baja</label></b> 
+      </div>
+      <div class="col-3">
+        <br>
+        <br>
+        <br>
+        <img class="imagenderecha" src='../assets/reloj.png'>
+        <br>
+        <b><label for="" style="color: #05454C;">Aprobación en menos de 24 horas</label></b> 
+      </div>
+
       
-
-    <!-- Grid row -->
-    <div class="row">
-
-     
-      <!--Grid column-->
-      <div class="col-lg-4 col-md-12 mb-4">
-        <!--Card-->
-        <div class="card testimonial-card">
-          <!--Background color-->
-          <div class="card-up info-color"></div>
-          <!--Avatar-->
-          <div class="avatar mx-auto white">
-            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-fluid">
-          </div>
-          <div class="card-body">
-            <!--Name-->
-            <h4 class="font-weight-bold mb-4">John Doe</h4>
-            <hr>
-            <!--Quotation-->
-            <p class="dark-grey-text mt-4"><i class="fas fa-quote-left pr-2"></i>Lorem ipsum dolor sit amet eos
-              adipisci, consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <!--Card-->
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <!--Card-->
-        <div class="card testimonial-card">
-          <!--Background color-->
-          <div class="card-up blue-gradient">
-          </div>
-          <!--Avatar-->
-          <div class="avatar mx-auto white">
-            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle img-fluid">
-          </div>
-          <div class="card-body">
-            <!--Name-->
-            <h4 class="font-weight-bold mb-4">Anna Aston</h4>
-            <hr>
-            <!--Quotation-->
-            <p class="dark-grey-text mt-4"><i class="fas fa-quote-left pr-2"></i>Neque cupiditate assumenda in
-              maiores repudiandae mollitia architecto.</p>
-          </div>
-        </div>
-        <!--Card-->
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <!--Card-->
-        <div class="card testimonial-card">
-          <!--Background color-->
-          <div class="card-up indigo"></div>
-          <!--Avatar-->
-          <div class="avatar mx-auto white">
-            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle img-fluid">
-          </div>
-          <div class="card-body">
-            <!--Name-->
-            <h4 class="font-weight-bold mb-4">Maria Kate</h4>
-            <hr>
-            <!--Quotation-->
-            <p class="dark-grey-text mt-4"><i class="fas fa-quote-left pr-2"></i>Delectus impedit saepe officiis
-              ab aliquam repellat rem unde ducimus.</p>
-          </div>
-        </div>
-        <!--Card-->
-      </div>
-      <!--Grid column-->
-
     </div>
-    <!-- Grid row -->
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+ 
   </section>
   <!--Section: Content-->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+
+
+
+
+
   
-</div>
-
-
-
-
-
-<div class="row fondo2">
-  <div class="col-sm ">
-   
-  </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div><!--final testimonios-->
 
 
 </div><!--Final Div Principal-->

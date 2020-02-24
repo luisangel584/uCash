@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
 
   public chartType: string = 'bar';
@@ -47,7 +48,73 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    var slider =<HTMLInputElement> document.getElementById('myRange');
+    var val =<HTMLInputElement> document.getElementById('Montocapturado');
+    var calculo =<HTMLInputElement> document.getElementById('calculo');
+    var monto = slider.value;
+
+    if(monto.length > 3 ){
+      monto = monto.substring(0, monto.length-3) + "," + monto.substring(monto.length-3,monto.length);
+    }
+
+    val.value="$ "+monto;
+
+    slider.oninput = function() {
+      
+      var monto = slider.value;
+      var calc : string;
+
+      if(monto.length > 3 ){
+        monto = monto.substring(0, monto.length-3) + "," + monto.substring(monto.length-3,monto.length);
+      }
+      
+      val.value= "$ "+monto;
+
+       calc =""+ Math.round(+slider.value / +sliderMes.value);
+
+      if(calc.length > 3){
+        calc = calc.substring(0, calc.length-3) +  "," + calc.substring(calc.length-3,calc.length);
+      }
+
+       calculo.value = "$ " + calc;
+
+    } 
+
+
+    var sliderMes =<HTMLInputElement> document.getElementById('RangeMes');
+    var valMes =<HTMLInputElement> document.getElementById('mescapturado');
+    valMes.value=sliderMes.value+" Meses";
+
+    sliderMes.oninput = function() {
+      valMes.value=sliderMes.value +" Meses";
+      var calc = ""+ Math.round(+slider.value / +sliderMes.value);
+
+      if(calc.length > 3){
+        calc = calc.substring(0, calc.length-3) +  "," + calc.substring(calc.length-3,calc.length);
+      }
+
+      calculo.value = "$ "+ calc;
+    } 
+
+    
+
+    
+
+
+    
+    
+
   }
+   
 
+  value() {
+    
+ }
 
+ 
+}
+
+export class CarouselComponent {
+  stars = Array(5);
 }
