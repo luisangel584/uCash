@@ -1,34 +1,32 @@
-<table class="table table-striped table-dark">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Status</th>
-        <th scope="col">Cantidad</th>
-        <th scope="col">FechaSolicitud</th>
-        <th scope="col">FechaTermino</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>APROBADO</td>
-        <td>100000MXN</td>
-        <td>18/02/2020</td>
-        <td>18/09/2020</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>EN PROCESO DE REVISION</td>
-        <td>100000MXN</td>
-        <td>18/02/2020</td>
-        <td>18/09/2020</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>APROBADO</td>
-        <td>100000MXN</td>
-        <td>18/02/2020</td>
-        <td>18/09/2020</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container">
+  <div class="row justify-content-md-center mt-5">
+      <div class="col col-md-6 col-xs 8">
+          <!-- Default form login -->
+          <form
+              (ngSubmit)="onSubmit(f)" 
+              #f="ngForm"
+              class="text-center border border-light p-5">
+
+              <p class="h4 mb-4">Solicitar Prestamo</p>
+          
+              <!-- Email -->
+              <input 
+                  name="email"
+                  type="email" 
+                  id="defaultLoginFormEmail" 
+                  class="form-control mb-4" 
+                  placeholder="Correo electrónico"
+                  [(ngModel)]="user.email">
+              <div class="d-flex justify-content-around">
+              <div>
+  
+    
+              </div>
+              </div>
+          
+          
+          </form>
+          <!-- Default form login -->
+      </div>
+  </div>
+</div>

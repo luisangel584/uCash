@@ -5,7 +5,7 @@ import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { PanelModule } from './panel/panel.module';
-
+import { PrestamoComponent } from './components/prestamo/prestamo.component';
 
 const routes: Routes = [
   {
@@ -23,6 +23,11 @@ const routes: Routes = [
   {
     path: 'usuario/perfil',
     component: ProfileComponent
+  },
+
+  {
+    path: 'usuario/prestamo',
+    component: PrestamoComponent
   },
 
   { path: '**', component: HomeComponent }

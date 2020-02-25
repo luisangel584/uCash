@@ -12,33 +12,37 @@
       <li class="nav-item" >
         <b class="nav-link waves-light" mdbWavesEffect 
         [routerLink]="['home']" routerLinkActive="active">
-          Home
+        <a>Home</a>
           <span class="sr-only">(current)</span>
       </b>
       </li>
-      <li class="nav-item">
-        <b class="nav-link waves-light" mdbWavesEffect
-        [routerLink]="['usuario/perfil']" routerLinkActive="active" >
-          Perfil
-      </b>
-      </li>
-
     </ul>
     <!-- Links -->
 
-    <ul class="navbar-nav ml-auto nav-flex-icons">
-      <li class="nav-item">
+    <ul  *ngIf="islog()" class="navbar-nav ml-auto nav-flex-icons">
+      <li  class="nav-item">
         <b class="nav-link waves-light" mdbWavesEffect
         [routerLink]="['ingresar']" routerLinkActive="active" >
-          Ingresar
+        <a>Ingresar</a>
       </b>
       </li>
       <li class="nav-item">
         <b class="nav-link waves-light" mdbWavesEffect
         [routerLink]="['registrarme']" routerLinkActive="active" >
-          ¡Registrate!
+        <a>¡Registrate!</a>
       </b>
       </li>
+    </ul>
+
+    <ul  *ngIf="!islog()" class="navbar-nav ml-auto nav-flex-icons">
+      <li  class="nav-item">
+        <b class="nav-link " 
+        [routerLink]="['panel']" routerLinkActive="inactive" #rla="routerLinkActive" >
+        <img src="{{rla.isActive ? '../../../assets/icons/useractive.png' : '../../../assets/icons/userinactive.png'}}" class="panelStyle"/>
+        <a (click)="logout()">Cerrar sesion</a> 
+      </b>
+      </li>
+      
     </ul>
   </links>
   <!-- Collapsible content -->

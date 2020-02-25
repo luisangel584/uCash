@@ -6,6 +6,7 @@ import { DatosPersonalesComponent } from './data/datos-personales/datos-personal
 import { SituacionLaboralComponent } from './data/situacion-laboral/situacion-laboral.component';
 import { LibretaDireccionesComponent } from './data/libreta-direcciones/libreta-direcciones.component';
 import { DatosBancariosComponent } from './data/datos-bancarios/datos-bancarios.component';
+import { PrestamosComponent } from './data/prestamos/prestamos.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,10 @@ const routes: Routes = [
         path: 'datos-bancarios',
         component: DatosBancariosComponent
       },
+      {
+        path: 'prestamos',
+        component: PrestamosComponent
+      }
     ]
   }
 ];

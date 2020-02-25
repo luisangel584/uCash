@@ -39,3 +39,27 @@
 .borderSocials{
     border-top: 1px solid #66D298;
 }
+
+.panelStyle{
+    display: block;
+    width: 60px;
+    height: 60px;
+    color: 
+    transparent;
+    font: 0/0 ;
+    text-shadow: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btnprestamoStyle{
+    display: block;
+    width: 100px;
+    height: 68px;
+    color: 
+    transparent;
+    font: 0/0 ;
+    text-shadow: none;
+}
+.nav-link{
+    cursor: pointer;
+}

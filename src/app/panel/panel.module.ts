@@ -11,6 +11,7 @@ import { DatosPersonalesComponent } from './data/datos-personales/datos-personal
 import { SituacionLaboralComponent } from './data/situacion-laboral/situacion-laboral.component';
 import { LibretaDireccionesComponent } from './data/libreta-direcciones/libreta-direcciones.component';
 import { DatosBancariosComponent } from './data/datos-bancarios/datos-bancarios.component';
+import { PrestamosComponent } from './data/prestamos/prestamos.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DatosBancariosComponent } from './data/datos-bancarios/datos-bancarios.
     DatosPersonalesComponent,
     SituacionLaboralComponent,
     LibretaDireccionesComponent,
-    DatosBancariosComponent
+    DatosBancariosComponent,
+    PrestamosComponent
   ],
   imports: [
     CommonModule,
